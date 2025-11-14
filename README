@@ -1,0 +1,68 @@
+## Student Information
+
+**Name:** Desmond Farley-Williams
+**Student ID:** 008508702
+**Repository:** https://github.com/3750449/Project-5----priority-queue-study_315_2025.git
+
+---
+
+## Collaboration & Sources
+- Standard references (cppreference, GeeksforGeeks) for C++ lookups and examples
+
+## Layout
+
+- **Implementations:** Binary heap, Binomial queue, Linear baseline, Quadratic oracle (sanity / small N)
+- **Trace profiles:** `batch_then_drain` (N inserts, then N delete/find ops)
+
+- **Executables:**
+  - `batch_then_drain_gen.exe` — generates `.trace` files
+  - `harness.exe` — replays traces and prints CSV rows to **stdout**
+  - `huffman_trace.exe` — (separate profile, optional)
+
+**CSV header and rows** are emitted by `harness` on stdout
+
+---
+
+## Build (in CLion)
+
+1. Open the root folder in CLion
+2. Build targets: `batch_then_drain_gen`, `harness`
+
+---
+
+## Generate traces
+
+The generator writes:
+ .\cmake-build-debug\batch_then_drain_gen.exe
+
+You should also see then ~55 files like:
+
+traces\batch_then_drain\batch_then_drain_N_1024_S_101.trace
+...
+traces\batch_then_drain\batch_then_drain_N_1048576_S_505.trace
+
+## Visualize
+
+Open the local chart page and upload the CSV:
+
+charts\pq_multi_impl_anchor_heap_tooltips.html
+
+---
+
+## Run the harness and capture CSV
+
+The harness finds traces relative to its own location:
+
+<harness.exe dir>\..\traces\batch_then_drain
+
+(with CLion’s default build, that’s `<repo>\traces\batch_then_drain`)
+
+---
+
+## Visualize
+
+Open the chart page and upload the CSV it asks for
+
+* `charts/pq_multi_impl_anchor_heap_tooltips.html`
+
+---
